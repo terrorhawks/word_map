@@ -1,0 +1,12 @@
+%html
+  %head
+    %title= [@title, "Wordie"].compact.join(" | ")
+    = stylesheet_link_tag 'reset', 'application'
+    = javascript_include_tag 'jquery', 'application', 'd3', 'd3.layout.cloud' 
+    = yield_content :include
+  %body
+    #header
+    #container
+      = yield
+      #footer
+      Copyright (c) 2012  
